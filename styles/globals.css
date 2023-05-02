@@ -1,27 +1,127 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+a {
+  color: unset;
+  text-decoration: none;
+}
+Link{
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+  background: #fff;
+}
+
+p {
+  color:#222;
+  line-height: 30px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+section {
+  padding-top: 150px;
+}
+
+footer {
+  padding-bottom: 10px;
+  padding-top: 60px;
+  border-top: 1px solid #171f38;
+}
+
+.primary__btn {
+  background: #ff6dcd;
+  padding: 7px 25px;
+  border: 1px solid #ff6dcd;
+  border-radius: 5px;
+}
+
+.primary__btn a {
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+}
+
+.secondary__btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 7px 25px;
+}
+
+.secondary__btn a {
+  color: #ff6dcd;
+}
+.primary__btn:hover
+{
+  background-color: #5a60ea;
+  color:#fff;
+  border: #5a60ea;
+}
+.secondary__btn:hover {
+  color:#5a60ea;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background: #808dad;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2em;
+  background: #171f38;
+}
+
+@media only screen and (max-width: 992px) {
+  p {
+    font-size: 0.9rem;
+  }
+
+  .primary__btn a,
+  .secondary__btn a {
+    font-size: 0.9rem;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media only screen and (max-width: 768px) {
+  section {
+    padding-top: 110px;
+  }
+
+  footer {
+    padding-top: 0;
+    border: none;
+  }
 }
+
+
+.slick-prev:before {
+  content: '←';
+}
+
+.slick-next:before {
+  content: '→';
+}
+.slick-prev,
+.slick-next {
+  display: block;
+}
+
